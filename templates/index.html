@@ -1,39 +1,67 @@
-{% extends 'base.html' %}
-{% block title %}Home{% endblock %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
 
-{% block content %}
-<style>
- body{background-image: url("/static/img/fundo.png");}
+        </div>
+      </nav>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Piece Mangá</title>
+    {% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    {% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
 
- 
- </style>
-<div>
-    <br>
-    <br>
-    <figure><img src="{{ url_for('static', filename='img/capa.png') }}" alt="Capa"></figure>
-</div>
-<div>
-    <h1>Sobre a faculdade:</h1>
-    <p style="padding-right: 4rem;">Lorem ipsum dolor sit amet. Ut consequatur ipsum vel dolorem omnis qui
-        accusantium dolorem ea dolores neque
-        vel autem quaerat. Sit necessitatibus quidem ut exercitationem accusamus est consectetur voluptatem qui
-        minus voluptatem. Et fuga eius vel laborum voluptatem vel iste sint. A rerum ipsum ut earum fugiat et iusto
-        quisquam aut eligendi mollitia.
-        Qui nobis molestiae aut expedita velit non consequuntur tempora sit laboriosam iste ut impedit voluptatum
-        eum deserunt necessitatibus. Id tempore sint est repellat vero eos error eius aut molestiae adipisci et
-        quisquam maiores. Ad excepturi sint nam repellendus corporis ut voluptates voluptatem qui labore minima? Et
-        harum rerum eos autem neque et sunt ipsum ut possimus consectetur et saepe consequatur.
-        <br>
-        <br>
-        Et voluptate aliquam At consequatur quos aut facilis sint cum error illo eos veniam facere. Sit laborum iste
-        eum assumenda ipsum est dolore voluptatem ut vitae voluptate qui dignissimos excepturi ea vero quod nam
-        delectus earum. Id dolores dicta qui mollitia doloremque et repudiandae velit a ratione quia ea voluptas
-        incidunt et cupiditate voluptatibus qui voluptatum repellat. Non temporibus consectetur qui ipsum voluptas
-        ab atque modi At ipsum voluptates et facere corporis aut soluta nobis sit iure facere.
-        <br>
-        <br>
-        <br>
-        <br>
-    </p>
-</div>
-{% endblock %}
+<script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
+
+</head>
+<body>
+    
+    <!-- Conteúdo do site aqui -->
+    
+    {% block content %}
+    <h1>Bem-vindo ao One Piece Mangá</h1>
+    <!-- Seu conteúdo aqui -->
+    {% endblock %}
+    
+    {% block scripts %}
+    {% endblock %}
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+
+    
+</body>
+</html>
