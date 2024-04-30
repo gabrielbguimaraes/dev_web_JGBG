@@ -2,18 +2,27 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-  }
+}
 li {
-display: inline;
+    display: inline;
 }
 .navbar {
-    background-image: url('/static/images/navbar_back.jpg');
-    background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a navbar */
-    background-position: center; /* Centraliza a imagem */
+    color: white;
+    background-color: transparent; /* Deixe o fundo transparente para que a imagem do logo seja visível */
     position: fixed;
     width: 100%;
-    z-index: 1000
+    top: 100px; /* Posiciona a navbar abaixo da imagem */
+    z-index: 1000;
 }
 body {
-    padding-top: 56px; /* Ajuste este valor de acordo com a altura da sua navbar */
+    padding-top: 156px; /* Ajuste este valor de acordo com a altura da imagem do logo + navbar */
+}
+.logo {
+    width: 200px; /* Largura da imagem do logo */
+    height: auto; /* Altura ajustável de acordo com a largura */
+    position: fixed; /* Para posicionar a imagem de forma fixa */
+    top: 50px; /* Distância do topo da página */
+    left: 50%; /* Para centralizar a imagem horizontalmente */
+    transform: translateX(-50%); /* Para centralizar a imagem horizontalmente */
+    z-index: 1001; /* Garante que a imagem esteja acima da navbar */
 }
