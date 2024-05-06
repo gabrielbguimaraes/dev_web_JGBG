@@ -1,110 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vídeo de One Piece</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
-    <style>
-        /* Estilos CSS específicos para a página do vídeo */
-        body {
-            background-color: #3498db; /* Cor de fundo azul */
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff; /* Cor do texto branco */
-        }
-
-        .header {
-            background-image: url('/static/images/navbar.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 200px;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar {
-            background-color: red;
-            position: fixed;
-            width: 100%;
-            top: 200px;
-            z-index: 999;
-        }
-
-        .jumbotron {
-            background-color: rgba(255, 255, 255, 0.2); /* Fundo branco transparente */
-            padding: 2rem 1rem;
-            border-radius: 0;
-            margin-top: 400px; /* Ajusta o espaçamento do topo do jumbotron */
-            text-align: center; /* Centraliza o conteúdo */
-        }
-
-        .jumbotron h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-            letter-spacing: 1px;
-            margin-bottom: 20px; /* Adiciona um espaçamento abaixo do título */
-        }
-
-        .jumbotron video {
-            width: 100%; /* Vídeo ocupa toda a largura do contêiner */
-            height: auto; /* Altura ajustável para manter a proporção */
-            border-radius: 10px; /* Adiciona uma pequena borda arredondada */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra suave */
-        }
-
-        .jumbotron p {
-            font-size: 1.25rem;
-            font-weight: normal;
-            line-height: 1.5;
-            color: #fff;
-            margin-bottom: 20px; /* Adiciona um espaçamento abaixo do parágrafo */
-        }
-
-        .jumbotron a.btn {
-            font-size: 1.25rem;
-            font-weight: bold;
-            border-radius: 25px;
-            padding: 10px 25px;
-            background-color: #E21B26;
-            border-color: #E21B26;
-        }
-
-        .jumbotron a.btn:hover {
-            background-color: #C70F1A;
-            border-color: #C70F1A;
-        }
-    </style>
-</head>
-<body>
-<!-- Barra de navegação -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">One Piece Brasil</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <!-- Outros itens do menu aqui -->
-        </ul>
-    </div>
-</nav>
+{% extends "base.html" %}
+{% block content %}
 
 <!-- Conteúdo da página do vídeo -->
-<div class="container">
-    <div class="header"></div>
 
     <div class="jumbotron">
-        <h1 class="display-4" style="font-family: 'Brush Script MT', cursive; font-size: 3.5rem;">Assista ao luffy despertar o Gear Fifth!</h1>
+        <h1 class="display-4" style="font-family: 'Onepiece', cursive; font-size: 3.5rem;">Assista ao luffy despertar o Gear Fifth!</h1>
         <div>
             <video width="640" height="360" controls>
                 <source src="{{ url_for('static', filename='gear5.mp4') }}" type="video/mp4">
@@ -113,7 +13,6 @@
         </div>
     </div>
 </div>
+{% endblock %}
 
-<script src="{{ url_for('static', filename='bootstrap.bundle.min.js') }}"></script>
-</body>
-</html>
+

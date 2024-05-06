@@ -11,5 +11,6 @@ def index():
 def video():
     return render_template('video.html')
 
+
 if __name__ == "__main__":
     app.run(debug=True)
