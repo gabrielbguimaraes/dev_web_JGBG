@@ -10,6 +10,9 @@ def index():
 @app.route('/video')
 def video():
     return render_template('video.html')
+@app.route('/manga.html')
+def manga():
+    return render_template('manga.html')
 
 
 if __name__ == "__main__":
