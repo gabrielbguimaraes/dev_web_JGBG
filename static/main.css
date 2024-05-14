@@ -1,83 +1,130 @@
+body {
+margin: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Onepiece';
+color: #fff;
+background-color: #1C2833; /* Cor de fundo inspirada no mar */
+}
 @font-face {
     font-family: "Onepiece";
-    src: url("/static/fonts/light\ stories\ font.ttf") format("truetype");
+    src: url("/static/fonts/one\ piece\ font.ttf") format("truetype");
 }
-
-body {
-    margin: 0;
-    font-family: 'Onepiece', sans-serif;
-    color: #fff;
-    background-color: #a1a7ad;
-    text-align: center;
-}
-
-.above-line {
-    background-size: cover;
-    background-image: url(/static/images/navbar.jpg);
-}
-
 .navbar {
-    background-color: #333;
-    overflow: hidden;
-    list-style-type: none;
-    padding: 0;
-    font-family: 'Onepiece', sans-serif;
-    margin-top: auto;
-    display: flex;
-    justify-content: flex-end;
-    border-bottom: none; /* Remover a borda inferior */
-    margin-bottom: 20px; /* Adicionar margem inferior para criar espaço */
+background-color: #E21B26;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 1000; /* Ajuste o z-index para colocar a navbar acima do header */
+height: 3.5rem;
 }
-
-.navbar ul {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-
-.navbar li {
-    margin-right: 20px;
-}
-
-.navbar li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.navbar li a:hover {
-    background-color: #555; /* Cinza escuro mais escuro para hover */
-    color: white; /* Manter o texto branco */
+.btn{
+    
+    font-family: 'Onepiece';
+    font-size: 40px;
+    
 }
 
 .header {
-    height: 400px;
-    background-image: url('/static/images/navbar.jpg');
-    background-size: cover;
-    background-position: center;
+background-image: url('/static/images/navbar.jpg');
+border: solid;
+background-size: cover;
+background-position: center;
+height: 400px;
+width: 100%;
+position: relative; /* Alterado para position: relative; */
+top: 3.5rem; /* Ajuste conforme a altura da navbar */
+z-index: 0; /* Alterado para z-index: 0; */
 }
 
-.section {
-    padding: 50px;
+.navbar-brand {
+font-size: 2rem;
+font-weight: bold;
+color: #fff;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+padding-left: 20px; /* Adiciona um espaçamento à esquerda para evitar a sobreposição com a logo */
 }
 
-.section h2 {
-    color: #fff;
+.navbar-brand img {
+max-height: 50px; /* Define a altura máxima da logo */
+margin-top: -10px; /* Ajusta a posição da logo */
+left: -70px;
 }
 
-.section p {
-    color: #fff;
+.dropdown-menu {
+background-color: #E21B26; /* Cor de fundo do menu suspenso */
+border: none; /* Remove a borda */
 }
 
-@media screen and (max-width: 768px) {
-    .navbar {
-        justify-content: center;
-    }
-    .navbar li {
-        margin: 0 10px;
-    }
-    .header {
-        height: 200px;
-    }
+.dropdown-menu a {
+color: #fff; /* Cor dos itens do menu suspenso */
+}
+
+.dropdown-menu a:hover {
+background-color: #C70F1A; /* Cor de fundo ao passar o mouse */
+}
+
+.jumbotron {
+background-color: transparent; /* Remove o fundo do jumbotron */
+padding: 2rem 1rem;
+margin-top: 250px; /* Espaçamento para evitar sobreposição com a barra de navegação */
+text-align: center;
+}
+
+.jumbotron h1 {
+font-size: 3.5rem;
+font-weight: bold;
+color: #F2F2F2; /* Cor do texto */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+margin-bottom: 20px;
+}
+
+.jumbotron p {
+font-size: 1.25rem;
+color: #F2F2F2;
+margin-bottom: 20px;
+
+font-family: 'Onepiece';
+font-size: 40px;
+
+}
+
+.jumbotron img {
+max-width: 50%;
+height: auto;
+margin-top: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.jumbotron a.btn {
+font-size: 1.25rem;
+font-weight: bold;
+border-radius: 25px;
+padding: 10px 25px;
+background-color: #E21B26;
+border-color: #E21B26;
+color: #fff;
+text-decoration: none;
+margin-top: 20px;
+}
+
+.jumbotron a.btn:hover {
+background-color: #C70F1A;
+border-color: #C70F1A;
+}
+
+.nav-item {
+    font-family: 'Onepiece';
+    font-size: 30px;
+}
+.dropdown-menu{
+    
+    font-family: 'Onepiece';
+    font-size: 30px;
+    
+}
+.display-4{
+    
+    font-family: 'Onepiece';
+    font-size: 30px;
+    
 }
