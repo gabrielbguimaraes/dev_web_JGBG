@@ -13,6 +13,9 @@ def video():
 @app.route('/manga.html')
 def manga():
     return render_template('manga.html')
+@app.route('/cadastro.html')
+def cadastro():
+    return render_template('cadastro.html')
 
 
 if __name__ == "__main__":
