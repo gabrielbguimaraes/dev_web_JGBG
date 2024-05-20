@@ -18,7 +18,7 @@ def manga():
     return render_template('/manga.html')
 
 conexao = mysql.connector.connect(
-    host="127.0.0.1",
+    host="localhost",
     user="root",
     password="#Ovelha354",
     database="registro_onepiece"
