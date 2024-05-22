@@ -7,4 +7,5 @@ blinker==1.7.0
 colorama==0.4.6
 MarkupSafe==2.1.5
 mysql-connector-python==8.0.28
+mysql-connector==2.2.9
 python-dotenv==1.0.1
