@@ -1,13 +1,22 @@
 from flask import Flask, render_template, request, redirect, url_for
 import mysql.connector
+import os
+from dotenv import load_dotenv, dotenv_values
+
+load_dotenv()
 
 app = Flask(__name__, static_url_path='/static')
 
+MYSQL_HOST: os.getenv("MYSQL_HOST")
+MYSQL_USER: os.getenv("MYSQL_USER")
+MYSQL_PASSWORD: os.getenv("MYSQL_PASSWORD")
+MYSQL_DB: os.getenv("MYSQL_DB")
+
 conexao = mysql.connector.connect(
-    host="mysql",
-    user="root",
-    password="#Ovelha354",
-    database="registro_onepiece"
+    host=MYSQL_HOST,
+    user=MYSQL_USER,
+    password="MYSQL_PASSWORD,
+    database=MYSQL_DB
 )
 cursor = conexao.cursor()
 
